@@ -1,4 +1,9 @@
 <h1>{{fechaActual | date:"medium"}}</h1>
+
+<button class="btn btn-outline-primary" (click)="mostrarAlumnos()">MostrarAlumnos</button>
+<button class="btn btn-outline-secondary" (click)="mostrarCursos()">MostrarCursos</button>
+<hr/>
+@if (mostrarResultado==1){
 <h1 class="display-6">Lista de alumnos</h1>
 <table class="table">
     <thead>
@@ -14,7 +19,8 @@
         }
     </tbody>
 </table>
-<hr/>
+}
+@if (mostrarResultado==0) {
 <h1 class="display-6">Lista de Cursos</h1>
 <table class="table">
     <thead>
@@ -32,3 +38,4 @@
         }
     </tbody>
 </table>
+}
